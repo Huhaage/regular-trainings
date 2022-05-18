@@ -6,7 +6,7 @@ import { Training } from '../model/training.model';
 })
 export class CartService {
   addTraining(training:Training){
-      
+    
   }
 
   constructor() { }
