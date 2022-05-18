@@ -12,9 +12,6 @@ export class TrainingsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-  }
-
-  displayTrainings() {
     this.listTrainings = [
       {id:1,name:'Java',description:'Formation Java SE  sur 5 jours',price:1500},
       {id:2,name:'DotNet',description:'Formation DotNet 3 jours',price:1500},
