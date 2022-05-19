@@ -10,16 +10,18 @@ import { Router } from '@angular/router';
 })
 export class TrainingsComponent implements OnInit {
   listTrainings : Training[] | undefined;
-  constructor(private cartService : CartService){}
+  constructor(private cartService : CartService, private router : Router){}
+  
   onAddToCart(training:Training){
     this.cartService.addTraining(training);
+    this.router.navigateByUrl('cart');
   }
 
   ngOnInit(): void {
     this.listTrainings = [
       {id:1,name:'Java',description:'Formation Java SE  sur 5 jours',price:1500,quantity:1},
       {id:2,name:'DotNet',description:'Formation DotNet 3 jours',price:1500,quantity:1},
-      {id:2,name:'Python',description:'Formation Python/Django 5 jours',price:1500,quantity:1}
+      {id:3,name:'Python',description:'Formation Python/Django 5 jours',price:1500,quantity:1}
     ];
   }
 
