@@ -7,18 +7,26 @@ import { Training } from '../model/training.model';
 
 export class CartService implements OnInit {
 
-  ngOnInit(): void {
-    if(localStorage.getItem('training')!=null) {
-      localStorage.getItem('training')
-    }
-  }
-
   trainings: Training[] = [];
+
+  getCart(){
+    return this.trainings;
+  }
 
   addTraining(training:Training){
     this.trainings.push(training);
-    localStorage.setItem('training', JSON.stringify(this.trainings));
+    localStorage.setItem('cart', JSON.stringify(this.trainings));
   }
 
-  constructor() { }
+  delTraining(training:Training){
+
+  }
+
+  
+  ngOnInit(): void {
+  }
+
+  constructor() {
+    let cart:Training[];
+   }
 }
